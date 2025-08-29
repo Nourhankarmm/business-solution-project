@@ -111,7 +111,7 @@ pnpm dev
 bun dev
 ```
 
-5. Open [http://localhost:8000](http://localhost:8000) with your browser to see the result.
+5. Open [http://localhost:8000](http://localhost:3000) with your browser to see the result.
 
 ## Environment Variables
 
@@ -178,22 +178,10 @@ src/
 
 ## Deployment
 
-### Vercel (Recommended)
+### Vercel 
+next step
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-1. Connect your repository to Vercel
-2. Add environment variables in Vercel dashboard
-3. Deploy automatically on git push
-
-### Other Platforms
-
-You can also deploy to other platforms like:
-
-- Netlify
-- AWS Amplify
-- Railway
-- DigitalOcean App Platform
 
 ## Contributing
 
