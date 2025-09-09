@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
@@ -201,7 +201,7 @@ export default function CampaignRequestPage() {
         window.location.href = '/dashboard'
       }, 3000)
 
-    } catch (err) {
+    } catch {
       setError('Failed to submit campaign request. Please try again.')
     } finally {
       setLoading(false)
@@ -228,7 +228,7 @@ export default function CampaignRequestPage() {
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900">Create Campaign Request</h1>
           <p className="mt-2 text-gray-600">
-            Tell us about your campaign and we'll match you with the perfect influencers
+            Tell us about your campaign and we&apos;ll match you with the perfect influencers
           </p>
         </div>
 
@@ -543,18 +543,20 @@ export default function CampaignRequestPage() {
                 </div>
 
                 <div>
-                  <Label htmlFor="specialRequirements">Special Requirements</Label>
-                  <Textarea
-                    id="specialRequirements"
-                    name="specialRequirements"
-                    value={formData.specialRequirements}
-                    onChange={handleInputChange}
-                    placeholder="Any specific requirements, restrictions, or preferences..."
-                    className="mt-1 min-h-[100px]"
-                  />
-                </div>
-              </div>
-            )}
+            <Label htmlFor="specialRequirements">Special Requirements</Label>
+            <Textarea
+              id="specialRequirements"
+              name="specialRequirements"
+              value={formData.specialRequirements}
+              onChange={handleInputChange}
+              placeholder="Any specific requirements, restrictions, or preferences..."
+              className="mt-1 min-h-[100px]"
+            />
+          </div>
+        </div>
+      )}
+
+
 
             {currentStep === 4 && (
               <div className="space-y-8">
@@ -624,7 +626,7 @@ export default function CampaignRequestPage() {
                       <div className="flex items-center space-x-2">
                         <Checkbox id="terms" />
                         <Label htmlFor="terms" className="text-sm">
-                          I agree to the platform's terms of service and understand that this campaign request will be reviewed by our team
+                          I agree to the platform&apos;s terms of service and understand that this campaign request will be reviewed by our team
                         </Label>
                       </div>
 

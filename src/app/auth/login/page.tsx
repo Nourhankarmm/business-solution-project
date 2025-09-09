@@ -59,7 +59,7 @@ export default function LoginPage() {
         alert('Login successful! Welcome back.')
         window.location.href = '/'
       }
-    } catch (err) {
+    } catch {
       setError('Login failed. Please check your credentials.')
     } finally {
       setLoading(false)

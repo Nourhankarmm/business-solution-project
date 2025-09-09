@@ -2,7 +2,6 @@
 
 A comprehensive Next.js application for business management with AI-powered features, subscription management, and payment processing.
 
-
 ## Features
 
 ### 🤖 AI-Powered Tools
@@ -11,12 +10,10 @@ A comprehensive Next.js application for business management with AI-powered feat
 - **Engagement Prediction**: AI-driven analytics to predict user engagement and campaign performance
 - **Recommendation Engine**: Smart suggestions for influencers, content, and business strategies
 - <img width="1901" height="901" alt="Screenshot 2025-08-29 105145" src="https://github.com/user-attachments/assets/ab381ffb-d4b4-4b89-8d09-212a94845167" />
-<img width="1919" height="884" alt="Screenshot 2025-08-29 105214" src="https://github.com/user-attachments/assets/0fa52843-8026-4422-8f70-f613de361271" />
-<img width="1908" height="917" alt="Screenshot 2025-08-29 105109" src="https://github.com/user-attachments/assets/ac92e975-a8c7-4b46-9f61-3aed2a935223" />
-<img width="1918" height="920" alt="Screenshot 2025-08-29 105056" src="https://github.com/user-attachments/assets/1ee81ab7-349c-4482-96df-da8135758b6d" />
-<img width="1918" height="899" alt="Screenshot 2025-08-29 105451" src="https://github.com/user-attachments/assets/ddb27af5-d5a9-4e2d-a00f-25ed2604e3b1" />
-
-
+  <img width="1919" height="884" alt="Screenshot 2025-08-29 105214" src="https://github.com/user-attachments/assets/0fa52843-8026-4422-8f70-f613de361271" />
+  <img width="1908" height="917" alt="Screenshot 2025-08-29 105109" src="https://github.com/user-attachments/assets/ac92e975-a8c7-4b46-9f61-3aed2a935223" />
+  <img width="1918" height="920" alt="Screenshot 2025-08-29 105056" src="https://github.com/user-attachments/assets/1ee81ab7-349c-4482-96df-da8135758b6d" />
+  <img width="1918" height="899" alt="Screenshot 2025-08-29 105451" src="https://github.com/user-attachments/assets/ddb27af5-d5a9-4e2d-a00f-25ed2604e3b1" />
 
 ### 💳 Subscription & Payment Management
 
@@ -26,28 +23,24 @@ A comprehensive Next.js application for business management with AI-powered feat
 - **Invoice Generation**: Automated invoice creation and management
 - <img width="1911" height="912" alt="Screenshot 2025-08-29 105647" src="https://github.com/user-attachments/assets/18590db0-c4ef-4c5b-aeb4-0a72ff69d63f" />
 
-
 ### 👥 User Management
 
 - **User Authentication**: Secure login and registration system
 - **Profile Management**: Complete user profile customization and management
 - **Social Connect**: Integration with social media platforms for enhanced connectivity
- <img width="1901" height="967" alt="Screenshot 2025-08-29 104827" src="https://github.com/user-attachments/assets/859e2df4-3de1-476d-8fd8-de7356f47caa" />
-<img width="1911" height="963" alt="Screenshot 2025-08-29 104843" src="https://github.com/user-attachments/assets/52e20efe-c565-4af4-90f2-87b27867fad0" />
-<img width="1911" height="903" alt="Screenshot 2025-08-29 104904" src="https://github.com/user-attachments/assets/a7e02f8a-3672-4f1a-a45e-5153278f4126" />
-<img width="1913" height="963" alt="Screenshot 2025-08-29 104921" src="https://github.com/user-attachments/assets/1a7fa83b-cff2-4c7d-a45a-5bedf30222e7" />
+  <img width="1901" height="967" alt="Screenshot 2025-08-29 104827" src="https://github.com/user-attachments/assets/859e2df4-3de1-476d-8fd8-de7356f47caa" />
+  <img width="1911" height="963" alt="Screenshot 2025-08-29 104843" src="https://github.com/user-attachments/assets/52e20efe-c565-4af4-90f2-87b27867fad0" />
+  <img width="1911" height="903" alt="Screenshot 2025-08-29 104904" src="https://github.com/user-attachments/assets/a7e02f8a-3672-4f1a-a45e-5153278f4126" />
+  <img width="1913" height="963" alt="Screenshot 2025-08-29 104921" src="https://github.com/user-attachments/assets/1a7fa83b-cff2-4c7d-a45a-5bedf30222e7" />
 
 ### 📊 Campaign Management
 
 - **Campaign Requests**: Streamlined campaign creation and management
 - **File Upload**: Easy media and document upload capabilities
 - **Analytics Dashboard**: Performance tracking and reporting
-<img width="1919" height="898" alt="Screenshot 2025-08-29 105814" src="https://github.com/user-attachments/assets/abbf8312-ee01-4096-ab02-f87d06b19274" />
-<img width="1856" height="911" alt="Screenshot 2025-08-29 105839" src="https://github.com/user-attachments/assets/40e8da5f-a4bd-48a9-92cb-77fcabeb4d00" />
-<img width="1883" height="918" alt="Screenshot 2025-08-29 110046" src="https://github.com/user-attachments/assets/d74acf4c-c226-4d5e-b004-860d9fc45690" />
-
-
-
+  <img width="1919" height="898" alt="Screenshot 2025-08-29 105814" src="https://github.com/user-attachments/assets/abbf8312-ee01-4096-ab02-f87d06b19274" />
+  <img width="1856" height="911" alt="Screenshot 2025-08-29 105839" src="https://github.com/user-attachments/assets/40e8da5f-a4bd-48a9-92cb-77fcabeb4d00" />
+  <img width="1883" height="918" alt="Screenshot 2025-08-29 110046" src="https://github.com/user-attachments/assets/d74acf4c-c226-4d5e-b004-860d9fc45690" />
 
 ## Tech Stack
 
@@ -178,10 +171,67 @@ src/
 
 ## Deployment
 
-### Vercel 
-next step
+### Vercel Deployment
 
+This project is configured for easy deployment on Vercel. Follow these steps:
 
+1. **Connect your repository to Vercel:**
+
+   - Go to [vercel.com](https://vercel.com) and sign in
+   - Click "New Project"
+   - Import your GitHub repository
+   - Vercel will automatically detect it's a Next.js project
+
+2. **Configure environment variables:**
+
+   - In your Vercel project settings, go to "Environment Variables"
+   - Add the following variables:
+     ```
+     NEXT_PUBLIC_OPENAI_API_KEY=your_openai_api_key_here
+     STRIPE_SECRET_KEY=your_stripe_secret_key_here
+     STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret_here
+     NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key_here
+     NEXT_PUBLIC_APP_NAME=Business Solution Platform
+     NEXT_PUBLIC_APP_VERSION=1.0.0
+     ```
+
+3. **Deploy:**
+
+   - Vercel will automatically build and deploy your project
+   - Your app will be available at a `.vercel.app` URL
+
+4. **Custom domain (optional):**
+   - In Vercel dashboard, go to your project settings
+   - Add your custom domain in the "Domains" section
+
+### Manual Deployment
+
+If you prefer to deploy manually:
+
+1. Build the project:
+
+   ```bash
+   npm run build
+   ```
+
+2. Start the production server:
+
+   ```bash
+   npm run start
+   ```
+
+3. The app will be available on port 3000 by default.
+
+### Environment Variables Setup
+
+Make sure to set all required environment variables in your deployment platform:
+
+- `NEXT_PUBLIC_OPENAI_API_KEY`: Your OpenAI API key for AI features
+- `STRIPE_SECRET_KEY`: Stripe secret key for payment processing
+- `STRIPE_WEBHOOK_SECRET`: Stripe webhook secret for payment events
+- `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`: Stripe publishable key for frontend
+- `NEXT_PUBLIC_APP_NAME`: Application name
+- `NEXT_PUBLIC_APP_VERSION`: Application version
 
 ## Contributing
 

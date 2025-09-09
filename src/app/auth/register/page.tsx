@@ -105,7 +105,7 @@ export default function RegisterPage() {
         window.location.href = '/auth/login'
       }, 2000)
 
-    } catch (err) {
+    } catch {
       setError('Registration failed. Please try again.')
     } finally {
       setLoading(false)
@@ -337,8 +337,8 @@ export default function RegisterPage() {
             {/* Additional Info */}
             <div className="mt-6 p-4 bg-gray-50 rounded-md">
               <p className="text-sm text-gray-600">
-                <strong>Note:</strong> After registration, influencers and ushers will need admin verification 
-                before accessing all platform features. You'll receive an email notification once verified.
+                <strong>Note:</strong> After registration, influencers and ushers will need admin verification
+                before accessing all platform features. You&apos;ll receive an email notification once verified.
               </p>
             </div>
           </CardContent>
