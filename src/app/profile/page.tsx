@@ -114,17 +114,18 @@ export default function ProfilePage() {
     try {
       // Simulate fetching social media metrics
       await new Promise(resolve => setTimeout(resolve, 2000))
-      
+
       const mockMetrics = {
         instagram: { followers: 15420, engagement: 4.2 },
         tiktok: { followers: 8930, engagement: 6.8 },
         youtube: { subscribers: 3240, views: 125000 },
         twitter: { followers: 2180, engagement: 2.1 }
       }
-      
+
       alert(`Social metrics fetched successfully!\n\nInstagram: ${mockMetrics.instagram.followers} followers (${mockMetrics.instagram.engagement}% engagement)\nTikTok: ${mockMetrics.tiktok.followers} followers (${mockMetrics.tiktok.engagement}% engagement)\nYouTube: ${mockMetrics.youtube.subscribers} subscribers\nTwitter: ${mockMetrics.twitter.followers} followers`)
-      
-    } catch {
+
+    } catch (err) {
+      console.error('Failed to fetch social media metrics:', err)
       setError('Failed to fetch social media metrics. Please try again.')
     } finally {
       setValidating(false)
@@ -150,9 +151,10 @@ export default function ProfilePage() {
       if (result.isValid) {
         setSuccess(`Profile validation successful! Score: ${result.score}/100`)
       } else {
-      setError(`Profile needs improvement. Score: ${result.score}/100`)
+        setError(`Profile needs improvement. Score: ${result.score}/100`)
       }
-    } catch {
+    } catch (err) {
+      console.error('Profile validation failed:', err)
       setError('Profile validation failed. Please try again.')
     } finally {
       setValidating(false)

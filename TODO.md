@@ -12,7 +12,8 @@
 
 ## Next Steps
 
-1. Push changes to GitHub
-2. Deploy to Vercel
-3. Configure environment variables on Vercel
-4. Test the deployed application
+1. [x] Push changes to GitHub
+2. [x] Get API keys (OpenAI key provided)
+3. Deploy to Vercel
+4. Configure environment variables on Vercel
+5. Test the deployed application
