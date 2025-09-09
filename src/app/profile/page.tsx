@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -12,6 +13,13 @@ import { Badge } from "@/components/ui/badge"
 import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { validateInfluencerProfile } from '@/lib/aiAPI'
+
+interface ValidationResult {
+  isValid: boolean
+  score: number
+  suggestions: string[]
+  flags: string[]
+}
 
 export default function ProfilePage() {
   const [formData, setFormData] = useState({
@@ -35,7 +43,7 @@ export default function ProfilePage() {
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
   const [loading, setLoading] = useState(false)
-  const [validationResult, setValidationResult] = useState<any>(null)
+  const [validationResult, setValidationResult] = useState<ValidationResult | null>(null)
   const [validating, setValidating] = useState(false)
 
   const serviceOptions = [
@@ -116,7 +124,7 @@ export default function ProfilePage() {
       
       alert(`Social metrics fetched successfully!\n\nInstagram: ${mockMetrics.instagram.followers} followers (${mockMetrics.instagram.engagement}% engagement)\nTikTok: ${mockMetrics.tiktok.followers} followers (${mockMetrics.tiktok.engagement}% engagement)\nYouTube: ${mockMetrics.youtube.subscribers} subscribers\nTwitter: ${mockMetrics.twitter.followers} followers`)
       
-    } catch (err) {
+    } catch {
       setError('Failed to fetch social media metrics. Please try again.')
     } finally {
       setValidating(false)
@@ -142,9 +150,9 @@ export default function ProfilePage() {
       if (result.isValid) {
         setSuccess(`Profile validation successful! Score: ${result.score}/100`)
       } else {
-        setError(`Profile needs improvement. Score: ${result.score}/100`)
+      setError(`Profile needs improvement. Score: ${result.score}/100`)
       }
-    } catch (err) {
+    } catch {
       setError('Profile validation failed. Please try again.')
     } finally {
       setValidating(false)
@@ -175,7 +183,7 @@ export default function ProfilePage() {
         window.location.href = '/'
       }, 2000)
 
-    } catch (err) {
+    } catch {
       setError('Failed to create profile. Please try again.')
     } finally {
       setLoading(false)
@@ -237,13 +245,12 @@ export default function ProfilePage() {
                 <div className="mt-2 flex items-center space-x-4">
                   <div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
                     {profileImage ? (
-                      <img 
-                        src={profileImage} 
+                      <Image
+                        src={profileImage}
                         alt="Profile picture preview showing uploaded image"
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          e.currentTarget.src = 'https://placehold.co/80x80?text=Profile'
-                        }}
+                        width={80}
+                        height={80}
+                        className="w-full h-full object-cover rounded-full"
                       />
                     ) : (
                       <span className="text-gray-400 text-xs">No Image</span>
@@ -445,7 +452,7 @@ export default function ProfilePage() {
               <div>
                 <Label>Available Dates</Label>
                 <p className="text-sm text-gray-500 mb-2">
-                  Select dates when you're available for campaigns
+                  Select dates when you are available for campaigns
                 </p>
                 <Popover>
                   <PopoverTrigger asChild>
@@ -489,12 +496,12 @@ export default function ProfilePage() {
 
               {validationResult && (
                 <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="font-medium">Profile Score:</span>
-                    <Badge variant={validationResult.score >= 80 ? "default" : "secondary"}>
-                      {validationResult.score}/100
-                    </Badge>
-                  </div>
+                    <div className="flex items-center justify-between">
+                      <span className="font-medium">Profile Score:</span>
+                      <Badge variant={validationResult.score >= 80 ? "default" : "secondary"}>
+                        {validationResult.score}/100
+                      </Badge>
+                    </div>
 
                   {validationResult.suggestions.length > 0 && (
                     <div>
@@ -527,16 +534,16 @@ export default function ProfilePage() {
             <Button type="button" variant="outline" onClick={() => window.history.back()}>
               Cancel
             </Button>
-            <Button
-              type="submit"
-              className="bg-black hover:bg-gray-800"
-              disabled={loading}
-            >
-              {loading ? 'Creating Profile...' : 'Create Profile'}
-            </Button>
-          </div>
-        </form>
-      </div>
-    </div>
-  )
-}
+                    <Button
+                      type="submit"
+                      className="bg-black hover:bg-gray-800"
+                      disabled={loading}
+                    >
+                      {loading ? 'Creating Profile...' : 'Create Profile'}
+                    </Button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          )
+        }

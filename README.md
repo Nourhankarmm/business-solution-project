@@ -171,7 +171,7 @@ src/
 
 ## Deployment
 
-### Vercel Deployment
+### Quick Vercel Deployment
 
 This project is configured for easy deployment on Vercel. Follow these steps:
 
@@ -232,6 +232,10 @@ Make sure to set all required environment variables in your deployment platform:
 - `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`: Stripe publishable key for frontend
 - `NEXT_PUBLIC_APP_NAME`: Application name
 - `NEXT_PUBLIC_APP_VERSION`: Application version
+
+### Additional Deployment Options
+
+For detailed deployment guides to other platforms (Netlify, Railway, AWS Amplify, etc.), see [DEPLOYMENT.md](./DEPLOYMENT.md).
 
 ## Contributing
 

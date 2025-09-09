@@ -86,7 +86,7 @@ const handlePayment = async () => {
 
         <div className="bg-gray-50 p-4 rounded-lg border">
           <p className="text-sm text-gray-600 mb-4">
-            You will be redirected to Stripe's secure payment page to complete your purchase.
+            You will be redirected to Stripe&apos;s secure payment page to complete your purchase.
             Your card details are never stored on our servers.
           </p>
           

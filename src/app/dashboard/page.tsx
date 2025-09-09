@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Badge } from "@/components/ui/badge"
@@ -14,7 +13,6 @@ import { Progress } from "@/components/ui/progress"
 
 export default function DashboardPage() {
   const [activeTab, setActiveTab] = useState('overview')
-  const [selectedUser, setSelectedUser] = useState<any>(null)
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState('')
   const [error, setError] = useState('')
@@ -70,7 +68,7 @@ export default function DashboardPage() {
           setSuccess(`User deleted successfully!`)
           break
       }
-    } catch (err) {
+    } catch {
       setError(`Failed to ${action} user. Please try again.`)
     } finally {
       setLoading(false)
@@ -86,7 +84,7 @@ export default function DashboardPage() {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000))
       setSuccess(`Campaign ${action}d successfully!`)
-    } catch (err) {
+    } catch {
       setError(`Failed to ${action} campaign. Please try again.`)
     } finally {
       setLoading(false)

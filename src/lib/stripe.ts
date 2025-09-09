@@ -1,8 +1,6 @@
 import Stripe from 'stripe'
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2025-08-27.basil' as any,
-})
+export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
 
 export const priceIdMap: Record<string, string> = {
   basic: process.env.STRIPE_BASIC_PRICE_ID!,

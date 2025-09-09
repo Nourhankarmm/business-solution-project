@@ -1,13 +1,14 @@
 'use client'
 
 import { useState, useRef } from 'react'
+import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Badge } from "@/components/ui/badge"
-import { X, Upload, Image, Video, File, CheckCircle } from 'lucide-react'
+import { X, Upload, ImageIcon, Video, File, CheckCircle } from 'lucide-react'
 
 interface FileUploadProps {
   onFilesChange: (files: File[]) => void
@@ -33,7 +34,7 @@ export default function FileUpload({
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const getFileIcon = (fileType: string) => {
-    if (fileType.startsWith('image/')) return <Image className="w-5 h-5" />
+    if (fileType.startsWith('image/')) return <ImageIcon className="w-5 h-5" />
     if (fileType.startsWith('video/')) return <Video className="w-5 h-5" />
     if (fileType.includes('pdf')) return <File className="w-5 h-5" />
     if (fileType.includes('word') || fileType.includes('document')) return <File className="w-5 h-5" />
@@ -257,9 +258,11 @@ export default function FileUpload({
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-2">
                   {Object.entries(previews).map(([fileName, previewUrl]) => (
                     <div key={fileName} className="relative group">
-                      <img
+                      <Image
                         src={previewUrl}
                         alt={`Preview of ${fileName}`}
+                        width={96}
+                        height={96}
                         className="w-full h-24 object-cover rounded-lg border"
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity rounded-lg flex items-center justify-center">
